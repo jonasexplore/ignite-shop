@@ -1,0 +1,32 @@
+[
+  {
+    "id": "clgi2gztk000008lc5a3gawkc",
+    "label": "Camiseta Beyond the Limits",
+    "image": "/1.png",
+    "price": "19.99"
+  },
+  {
+    "id": "clgi2h7ya000108lc2aqf2bx9",
+    "label": "Camiseta Adventure Time",
+    "image": "/2.png",
+    "price": "24.99"
+  },
+  {
+    "id": "clgi2hc9u000208lc553p4ecr",
+    "label": "Camiseta Super Mario Bros",
+    "image": "/3.png",
+    "price": "22.50"
+  },
+  {
+    "id": "clgi2hfx5000308lcfxlc8wnz",
+    "label": "Camiseta Star Wars",
+    "image": "/4.png",
+    "price": "29.99"
+  },
+  {
+    "id": "clgi2hkln000408lc0900hbi9",
+    "label": "Camiseta The Legend of Zelda",
+    "image": "/5.png",
+    "price": "25.00"
+  }
+]

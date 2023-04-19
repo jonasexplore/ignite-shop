@@ -2,9 +2,13 @@
 
 import { Card } from "@/components/card";
 import products from "@/mocks/products.json";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
 export default function Page() {
+  const router = useRouter();
+
+  const CARD_WIDTH_WITH_GAP = 648;
   const carrosel = useRef<any>(null);
 
   const handleRightClick = (event: any) => {
@@ -12,7 +16,7 @@ export default function Page() {
 
     if (!carrosel.current) return;
 
-    carrosel.current.scrollLeft += carrosel.current.offsetWidth;
+    carrosel.current.scrollLeft += CARD_WIDTH_WITH_GAP;
   };
 
   const handleLeftClick = (event: any) => {
@@ -20,7 +24,11 @@ export default function Page() {
 
     if (!carrosel.current) return;
 
-    carrosel.current.scrollLeft -= carrosel.current.offsetWidth;
+    carrosel.current.scrollLeft -= CARD_WIDTH_WITH_GAP;
+  };
+
+  const handleOnClickProduct = (id: string) => {
+    router.push(`/products/${id}`);
   };
 
   return (
@@ -33,7 +41,13 @@ export default function Page() {
           {products.map((product) => {
             const { id, ...props } = product;
 
-            return <Card active key={id} {...props} />;
+            return (
+              <Card
+                key={id}
+                onClick={() => handleOnClickProduct(id)}
+                {...props}
+              />
+            );
           })}
         </div>
       </div>
